@@ -11,15 +11,12 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ServletComponentScan
+@ComponentScan(basePackages = "com.example.springboottestone.*")
 @EnableCaching
-public class SpringbootTestOneApplication extends SpringBootServletInitializer {
+public class SpringbootTestOneApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootTestOneApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(SpringbootTestOneApplication.class);
-	}
 }
