@@ -120,30 +120,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<!--				<version>1.4.2.RELEASE</version>-->
 			</plugin>
 
-			<!--<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.1.1</version>
-				<configuration>
-					&lt;!&ndash; not append assembly id in release file name &ndash;&gt;
-					<appendAssemblyId>false</appendAssemblyId>
-					<descriptors>
-						<descriptor>src/main/resources/assembly.xml</descriptor>
-					</descriptors>
-				</configuration>
 
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>-->
 		</plugins>
 
 		<resources>
@@ -159,11 +139,11 @@
 				<filtering>true</filtering>
 			</resource>
 			<resource>
-				<directory>${basedir}/src/main/webapp</directory>
+				<directory>src/main/webapp</directory>
 				<!--注意此次必须要放在此目录下才能被访问到 -->
-				<targetPath>WEB-INF/jsp</targetPath>
+<!--				<targetPath>META-INF/resources</targetPath>-->
 				<includes>
-					<include>*.jsp</include>
+					<include>WEB-INF/jsp</include>
 				</includes>
 			</resource>
 		</resources>
